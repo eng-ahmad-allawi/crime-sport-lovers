@@ -1,0 +1,63 @@
+/* React Flow Custom Styles */
+.react-flow__node {
+  cursor: grab;
+}
+
+.react-flow__node:active {
+  cursor: grabbing;
+}
+
+.react-flow__handle {
+  opacity: 0.5;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.react-flow__node:hover .react-flow__handle {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.react-flow__edge-path {
+  stroke-linecap: round;
+}
+
+/* Custom Cursor for Investigation Board */
+.investigation-cursor {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23C9A227' stroke-width='2'%3E%3Cpath d='M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0'/%3E%3Cpath d='M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2'/%3E%3Cpath d='M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8'/%3E%3Cpath d='M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15'/%3E%3C/svg%3E") 12 12, grab;
+}
+
+/* RTL Specific Fixes */
+[dir="rtl"] .react-flow__controls {
+  left: 10px;
+  right: auto;
+}
+
+/* Scrollbar for Arabic */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(15 45% 6%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(42 65% 47% / 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(42 65% 47% / 0.5);
+}
+
+/* Selection Color */
+::selection {
+  background: hsl(42 65% 47% / 0.3);
+  color: hsl(35 45% 92%);
+}
+
+/* Focus Styles */
+:focus-visible {
+  outline: 2px solid hsl(42 65% 47%);
+  outline-offset: 2px;
+}
